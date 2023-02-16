@@ -1,6 +1,4 @@
-#include < stdio.h>
-
-/* this c code prints a string of charachters*/
+#include <stdio.h>
 
 int main (void)
 {
