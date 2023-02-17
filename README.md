@@ -1,1 +1,1 @@
-this repository hold beginner c code
+README file for else if tasks
