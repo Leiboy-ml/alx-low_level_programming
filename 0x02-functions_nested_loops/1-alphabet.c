@@ -11,7 +11,7 @@ int main(void)
 
 	while (a < 122)
 	{
-		_putchar("%c", a);
+		print_alphabet("%c", a);
 		a++;
 	}
 
