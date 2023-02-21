@@ -5,6 +5,7 @@
  * main - Prints string to console
  * Return: 0 - Success
  */
+void print_alphabet(int);
 
 int main(void)
 {
@@ -12,7 +13,7 @@ int main(void)
 
 	while (a <= 122)
 	{
-		print_alphabet(a);
+		_putchar(a);
 		a++;
 		
 	}
