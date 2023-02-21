@@ -1,5 +1,7 @@
 #include "main.h"
 #include <stdio.h>
+#define print_alphabet printf
+
 /**
  * main - Prints string to console
  * Return: 0 - Success
