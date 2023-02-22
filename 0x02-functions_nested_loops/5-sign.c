@@ -1,25 +1,27 @@
-#include "main.h"
 
 /**
- * print_sign - Prints the sign of a number.
- * @n: The number of which the sign will be printed.
- *
- * Return: 1 if the number is greater than zero,
- *         0 if the number is zero,
- *         -1 if the number is less than zero.
+ * print_sign - Entry point
+ * n: the integer value it receives
+ * Description: checks if the number is positive,negative or zero
+ * * Return: 1 if positive,-1 if negative,else returns zero
  */
 
-int _islower(int c)
-{
-int i = 'a';
 
-for (i = 'a'; i <= 'z'; i++)
+int print_sign(int n);
 {
-/* refer int c*/
-if (c == i)
-{
-return (1);
-}
-}
-return (0);
+	if (n > 0)
+        {
+	_putchar("%d is greater than zero")
+	
+	return (1);
+        }
+        else if (n < 0)
+        {
+
+                return (-1);
+        }
+        else
+        {
+                return (0);
+        }
 }
