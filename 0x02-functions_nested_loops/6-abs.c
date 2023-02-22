@@ -4,8 +4,13 @@
 /**
  * int_abs(int) - main entry point
  *
+ * _abs - Finds the absolute value of an integer
+ *
+ * x: is the integer value
+ *
  * the function computes the absolute value of an integer
  *
+ * Return: integer
  */
 int _abs(int x)
 {
