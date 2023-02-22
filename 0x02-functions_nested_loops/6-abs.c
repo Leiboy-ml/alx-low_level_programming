@@ -9,10 +9,12 @@
  */
 int _abs(int x)
 {
-	
-	x = abs(-1);
-	
-	printf("%d \n",x);
-
-	return (0);
+	if (x < 0)
+	{
+		return (x * -1);
+	}
+	else
+	{
+		return (x);
+	}
 }
