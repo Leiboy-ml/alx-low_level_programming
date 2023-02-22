@@ -1,33 +1,31 @@
 #include "main.h"
-#include <stdio.h>
-/**
- * print_sign - Entry point
- * n: the integer value it receives
- * Description: checks if the number is positive,negative or zero
- * * Return: 1 if positive,-1 if negative,else returns zero
- */
 
+/**
+ * print_sign - main entry point
+ *
+ * the function indicates if the value is positive or negative
+ *
+ * @n: is the integer value it receives
+ *
+ * Return: 1 if n>0, 0 if n == 0, -1 if n<0
+ */
 
 int print_sign(int n)
 {
-	if (n > 0)
-        {
-	_putchar("%d is greater than zero\n",n);
-	
+
+if (n > 0)
+{
+	_putchar('+');
+
 	return (1);
+}
 
-        }
+if (n < 0)
+{
+	_putchar('-');
 
-        else if (n < 0)
-	
-        {
-		_putchar("%d is less than zero\n",n);
-                return (-1);
-                
-        }
-        else
-        {
-		_putchar("%d is zero\n",n);
-		return (0);
-        }
+	return (-1);
+}
+	_putchar('0');
+	return (0);
 }

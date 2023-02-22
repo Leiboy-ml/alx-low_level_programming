@@ -1,7 +1,8 @@
-/* header file
-*/
-int main(void);
-int _putchar(int);
+/**
+ * This will be the included in the putchar task
+ */
+#define putchar _putchar
+int _putchar(char c);
 void print_alphabet(void);
 void print_alphabet_x10(void);
 int _islower(int c);
@@ -13,6 +14,4 @@ void jack_bauer(void);
 void times_table(void);
 int add(int, int);
 void print_to_98(int n);
-void print_times_table(int n);
 
-#define _putchar printf
