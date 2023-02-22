@@ -10,9 +10,9 @@
 int _abs(int x)
 {
 	
-	x = abs(5);
+	x = abs(-1);
 	
-	_putchar(x);
+	printf("%d \n",x);
 
 	return (0);
 }
