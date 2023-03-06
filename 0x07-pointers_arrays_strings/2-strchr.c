@@ -9,7 +9,7 @@
  * If c is not found - NULL.
  */
 
-char *_strchr(char *s, char c);
+char *_strchr(char *s, char c)
 {
 	int index;
 
