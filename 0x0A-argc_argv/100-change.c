@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
 
 	for (x = 0; x < 5; x++)
 	{
-		coin_count = cents / coins[i];
+		coin_count = cents / coins[x];
 		num_coins += coin_count;
 		cents -= coin_count * coins[x];
 	}
