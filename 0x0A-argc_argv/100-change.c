@@ -17,7 +17,6 @@ int main(int argc, char *argv[])
 	int num_coins;
 	int coins[5] = {25, 10, 5, 2, 1};
 	int x;
-	
 
 	if (argc != 2)
 	{
