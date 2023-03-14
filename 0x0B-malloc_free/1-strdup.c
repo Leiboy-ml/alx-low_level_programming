@@ -32,11 +32,11 @@ char *_strdup(char *str)
 	{
 		if (x == str_len)
 		{
-			str[x] = *new;
-		{
+			str[x] = new[x];
+		}
 	}
 
 
 	return (new);
 	
-}}}
+}
