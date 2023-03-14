@@ -25,11 +25,15 @@ char *create_array(unsigned int size, char c)
 		{
 			array[i] = c;
 
-			return ('\0');
+			return (NULL);
 		}
 
-	return (array);
+		if (array == NULL)
+			return (NULL);
+		else 
+
+			return (array);
 	}
 
-	return ('\0');
+	return (NULL);
 }
