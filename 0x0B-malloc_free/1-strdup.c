@@ -9,34 +9,25 @@
  */
 
 char *_strdup(char *str)
-{	
-
-	int str_len = 0;
-	int x;
-	char *new;
-
-	str = malloc((sizeof(char) * str_len) + 1);
+{
+	char *duplicate;
+	int index, len = 0;
 
 	if (str == NULL)
-	{
-		return ('\0');
-	}
+		return (NULL);
 
-	while (*str != '\0')
-	{
-		str_len++;
-	}
+	for (index = 0; str[index]; index++)
+		len++;
 
-	for (x = 0; x <= str_len; x++)
+	duplicate = malloc(sizeof(char) * (len + 1));
 
-	{
-		if (x == str_len)
-		{
-			str[x] = new[x];
-		}
-	}
+	if (duplicate == NULL)
+		return (NULL);
 
+	for (index = 0; str[index]; index++)
+		duplicate[index] = str[index];
 
-	return (new);
-	
+	duplicate[len] = '\0';
+
+	return (duplicate);
 }
