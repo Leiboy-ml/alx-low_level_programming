@@ -21,19 +21,13 @@ char *create_array(unsigned int size, char c)
 
 	array[i] = c;
 
+	if (size == 0)
+		return ('\0');
+
 	for (i = 0; i < size; i++)
 	{
-		if (i == 0)
-		{
-			return (NULL);
-		}
-
-		if (i > 0)
-
-		{
-			return (array);
-		}
-
-			return (NULL);
+		return (array);
 	}
+
+	return ('\0');
 }
