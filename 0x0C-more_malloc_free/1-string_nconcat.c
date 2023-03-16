@@ -41,12 +41,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 		strcat(s1, s2);
 		}
+			return (s1);
+
 		if (s1 || s2 == NULL)
 		{
 		free(s1);
 		free(s2);
 		}
 	}
-	return (s1);
-
+	return (NULL);
 }
