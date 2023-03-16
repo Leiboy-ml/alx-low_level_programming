@@ -10,44 +10,40 @@
  * @n: size of s2 to concatenate
  * Return: pointer or NULL
  */
+
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int i;
+	unsigned int len1, i = 0;
+	char *res;
 
 	if (s1 == NULL)
 	{
-	s1 = "";
+		s1 = "";
 	}
 	if (s2 == NULL)
 	{
-	s2 = "";
+		s2 = "";
 	}
-
-	for (i = 0; i < n; i++)
+	len1 = strlen(s1);
+	res = malloc(len1 + n + 1);
+	if (res == NULL)
 	{
-		if (n < strlen(s2))
+		return (NULL);
+	}
+	for (i = 0; i <= (len1 + n); i++)
+	{
+		if (i < len1)
 		{
-		s1 = malloc(sizeof(char) * strlen(s1));
-
-		s2 = malloc(sizeof(char) * (n + 1));
-
-		strcat(s1, (s2 + n));
+			res[i] = s1[i];
 		}
-		if (n >= strlen(s2))
+		if (i >= len1)
 		{
-		s1 = malloc(sizeof(char) * strlen(s1));
-
-		s2 = malloc(sizeof(char) * strlen(s2));
-
-		strcat(s1, s2);
+			res[i] = s2[(i - len1)];
 		}
-			return (s1);
-
-		if (s1 || s2 == NULL)
+		if (i == (len1 + n))
 		{
-		free(s1);
-		free(s2);
+			res[i] = '\0';
 		}
 	}
-	return (NULL);
+	return (res);
 }
