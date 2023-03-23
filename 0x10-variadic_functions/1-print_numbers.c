@@ -23,15 +23,15 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	{
 		if (separator == NULL)
 		{
-			printf("%d", va_arg(numbers, int));
+			_putchar ("%d", va_arg(numbers, int));
 		}
 
 		else 
-			printf("%d %s", va_arg(numbers, int), separator);
+			-putchar ("%d %s", va_arg(numbers, int), separator);
 
 	}
 
 	va_end(numbers);
 
-	printf("\n");
+	_putchar("\n");
 }
