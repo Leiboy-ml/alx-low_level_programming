@@ -9,11 +9,7 @@
  * @...: A variable number of numbers to be printed.
  */
 
-int main(void)
-{
-	print_numbers(", ", 2, "Jay", "Django");
-    return (0);
-}
+
 
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
