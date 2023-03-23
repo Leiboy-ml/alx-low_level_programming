@@ -9,51 +9,22 @@
  * @...: A variable number of numbers to be printed.
  */
 
-
-/**
-void print_numbers(const char *separator, const unsigned int n, ...)
-{
-	va_list numbers;
-
-	unsigned int elements;
-
-	va_start(numbers, n);
-
-	for (elements = 0; elements <= n; elements++)
-	{
-		if (separator == NULL)
-		{
-			printf("%d", va_arg(numbers, int));
-		}
-
-		else 
-			printf("%d %s", va_arg(numbers, int), separator);
-
-	}
-
-	va_end(numbers);
-
-	printf("\n");
-}
-*
-*/
-
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	va_list nums;
-	unsigned int index;
+	unsigned int list;
 
 	va_start(nums, n);
 
-	for (index = 0; index < n; index++)
+	for (list = 0; list < n; list++)
 	{
-		printf("%d", va_arg(nums, int));
+		_putchar(va_arg(nums, int));
 
-		if (index != (n - 1) && separator != NULL)
-			printf("%s", separator);
+		if (list != (n - 1) && separator != NULL)
+			_putchar; const char (separator);
 	}
 
-	printf("\n");
+	_putchar('\n');
 
 	va_end(nums);
 }
