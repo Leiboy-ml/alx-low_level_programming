@@ -9,6 +9,12 @@
  * @...: A variable number of numbers to be printed.
  */
 
+int main(void)
+{
+	print_numbers(", ", 2, "Jay", "Django");
+    return (0);
+}
+
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	va_list numbers;
@@ -19,11 +25,18 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	for (elements = 0; elements <= n; elements++)
 	{
-		printf("%d %s", va_arg(numbers, int), separator);
+		if (separator == NULL)
+		{
+			printf("%d", va_arg(numbers, int));
+		}
+
+		else 
+			printf("%d %s", va_arg(numbers, int), separator);
 
 	}
+	printf("%d", va_arg(numbers, int));
+	
+	va_end(numbers);
 
 	printf("\n");
-
-		va_end(numbers);
 }
