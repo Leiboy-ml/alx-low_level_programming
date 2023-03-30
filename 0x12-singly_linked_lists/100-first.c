@@ -5,7 +5,7 @@
  * Return: nothing
  */
 
-Void print_before()
+void print_before()
 {
 	printf("You're beat! and yet, you must allow,\n");
 	printf("I bore my house upon my back!\n");
