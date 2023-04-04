@@ -8,7 +8,7 @@
  * @index: the index of the node to locate 
  *
  * Return: if node dose not exist - NULL
- *		else - the located node.
+ *	else - the located node.
  */
 
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
