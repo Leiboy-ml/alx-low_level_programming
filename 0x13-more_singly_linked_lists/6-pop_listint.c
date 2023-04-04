@@ -2,9 +2,9 @@
 
 /**
  *pop_listint - deletes the head node of the list
- *@head: points to the sdress of the head
+ *@head: points to the address of the head
  *Return: 0 if the lis is empty
- *		else return the data in the head node
+ *	else return the data in the head node
  *
  *
  */
