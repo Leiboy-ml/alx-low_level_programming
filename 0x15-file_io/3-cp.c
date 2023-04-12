@@ -15,7 +15,7 @@ void close_file(int fd);
 char *create_buffer(char *file)
 {
 	char *buffer;
-	
+
 	buffer = malloc(sizeof(char) * 1024);
 
 	if (buffer == NULL)
@@ -52,14 +52,14 @@ void close_file(int fd)
  *
  * Return: 0 on success.
  *
- * */
+ */
 
 int main(int argc, char *argv[])
 {
 	int from, to, r, w;
 	char *buffer;
 
-	if(argc != 3)
+	if (argc != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
