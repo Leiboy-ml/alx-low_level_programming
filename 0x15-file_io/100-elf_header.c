@@ -1,7 +1,7 @@
 #include <elf.h>
 #include <sys/types.h>
 #include <sys/stat.h>
-#include <fcnt1.h>
+#include <fcntl.h>
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -50,7 +50,7 @@ void print_magic(unsigned char *e_ident)
 
 	printf(" Magic: ");
 
-	for (i = 0; i < EI_NIDEN; i++)
+	for (i = 0; i < EI_NIDENT; i++)
 	{
 		printf("%02x", e_ident[i]);
 
@@ -150,7 +150,7 @@ void print_osabi(unsigned char *e_ident)
 		case ELFOSABI_SOLARIS:
 			printf("UNIX - Solaris\n");
 			break;
-		case ELFOSABI_IRX:
+		case ELFOSABI_IRIX:
 			printf("UNIX - IRIX\n");
 			break;
 		case ELFOSABI_FREEBSD:
@@ -234,7 +234,7 @@ void print_entry(unsigned long int e_entry, unsigned char *e_ident)
 	if (e_ident[EI_CLASS] == ELFCLASS32)
 		printf("%#x\n", (unsigned int)e_entry);
 	else
-		printf("%#1x\n", e_entry);
+		printf("%#11x\n", (long unsigned int)e_entry);
 }
 
 /**
@@ -260,10 +260,11 @@ void close_elf(int elf)
  *
  */
 
-int main(int __attribute__((__unused__)) argc, char *arg[])
+int main(int __attribute__((__unused__)) argc, char *argv[])
 {
-	Elf64_Ehdr *header:
-		int o, r;
+	Elf64_Ehdr *header;
+		int o;
+		int r;
 
 	o = open(argv[1], O_RDONLY);
 	if (o == -1)
@@ -274,7 +275,7 @@ int main(int __attribute__((__unused__)) argc, char *arg[])
 	header = malloc(sizeof(Elf64_Ehdr));
 	if (header == NULL)
 	{
-		close_elf9o0-;
+		close_elf(0);
 		dprintf(STDERR_FILENO,"Error: Can't read file %s\n", argv[1]);
 		exit(98);
 	}
@@ -283,7 +284,7 @@ int main(int __attribute__((__unused__)) argc, char *arg[])
 	{
 		free(header);
 		close_elf(o);
-		dprintf(STDERR_FILENO, "Error: '%s': No such file\n", argv[1];
+		dprintf(STDERR_FILENO, "Error: '%s': No such file\n", argv[1]);
 		exit(98);
 	}
 
@@ -300,5 +301,6 @@ int main(int __attribute__((__unused__)) argc, char *arg[])
 
 	free(header);
 	close_elf(o);
+
 	return (0);
 }
